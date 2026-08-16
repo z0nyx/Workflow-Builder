@@ -16,6 +16,11 @@ class Settings(BaseSettings):
     database_user: str = "workflow_builder"
     database_password: str = "workflow_builder"
 
+    jwt_secret_key: str = "change-me"
+    jwt_algorithm: str = "HS256"
+    access_token_expire_minutes: int = 15
+    refresh_token_expire_days: int = 30
+
     redis_host: str = "localhost"
     redis_port: int = 6379
     redis_db: int = 0
